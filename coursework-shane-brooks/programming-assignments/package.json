@@ -1,0 +1,20 @@
+{
+  "name": "programming-assignments-helpers",
+  "version": "1.0.0",
+  "description": "A collection of helper scripts for working with programming assignments",
+  "main": "index.js",
+  "scripts": {
+    "test": "pushd js-assessment && npx mocha -R spec tests/app && popd",
+    "test:pa1": "pushd js-assessment && npx mocha -R spec tests/app/arrays.js tests/app/bestPractices.js && popd",
+    "eject:pa1": "echo 'Copying solutions for Programming Assignment 1' && shx mkdir -p pa1 && shx cp -u js-assessment/app/arrays.js pa1/arrays.js && shx cp -u js-assessment/app/bestPractices.js pa1/bestPractices.js",
+    "stage:pa1": "echo 'Staging solutions for Programming Assignment 1' && shx cp -u pa1/arrays.js js-assessment/app/arrays.js  && shx cp -u pa1/bestPractices.js js-assessment/app/bestPractices.js ",
+    "clean": "shx rm -rf node_modules"
+  },
+  "author": "Cornelius Toole <cornelius.toole@gmail.com> (micro.corntoole.com)",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "shelljs": "^0.8.4",
+    "shx": "^0.3.3"
+  }
+}
